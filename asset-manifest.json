@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portf-lio-React/static/css/main.7d69811a.css",
+    "main.js": "/Portf-lio-React/static/js/main.8e377670.js",
+    "static/js/453.1407b060.chunk.js": "/Portf-lio-React/static/js/453.1407b060.chunk.js",
+    "static/media/colagem.png": "/Portf-lio-React/static/media/colagem.b2ea055aeb5a25f0d270.png",
+    "static/media/foto2.jpg": "/Portf-lio-React/static/media/foto2.1b7725b4322d995aae34.jpg",
+    "static/media/foto21.jpeg": "/Portf-lio-React/static/media/foto21.58d53d4c2887c60d07a2.jpeg",
+    "static/media/foto15(2).jpg": "/Portf-lio-React/static/media/foto15(2).194de3069001354038e7.jpg",
+    "static/media/foto13(1).jpg": "/Portf-lio-React/static/media/foto13(1).aec5926d22eb9591a3f3.jpg",
+    "static/media/logo-512x512.png": "/Portf-lio-React/static/media/logo-512x512.c4330f11de5498f884a2.png",
+    "index.html": "/Portf-lio-React/index.html",
+    "main.7d69811a.css.map": "/Portf-lio-React/static/css/main.7d69811a.css.map",
+    "main.8e377670.js.map": "/Portf-lio-React/static/js/main.8e377670.js.map",
+    "453.1407b060.chunk.js.map": "/Portf-lio-React/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d69811a.css",
+    "static/js/main.8e377670.js"
+  ]
+}
