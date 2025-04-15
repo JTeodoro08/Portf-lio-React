@@ -1,0 +1,98 @@
+@import './styles/Variables.css';
+
+/* Estilos globais */
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color); /* Integrando com o tema */
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho */
+.App-header {
+  background-color: #1E3A8A; /* Azul clássico */
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition, 0.3s ease-in-out);
+}
+
+/* Links */
+.App-link {
+  color: #F2C94C;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition, 0.3s ease-in-out);
+}
+
+.App-link:hover {
+  color: #FFD700;
+}
+
+.App-link:focus {
+  outline: 2px dashed #FFD700;
+  outline-offset: 2px;
+}
+
+/* Conteúdo principal */
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+/* Botões */
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all var(--transition, 0.3s ease-in-out);
+}
+
+.btn--primary {
+  background-color: #F2C94C;
+  color: #1E3A8A;
+  font-weight: bold;
+}
+
+.btn--primary:hover {
+  background-color: #FFD700;
+}
+
+.btn--primary:focus {
+  outline: 2px dashed #1E3A8A;
+  outline-offset: 3px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .App-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+}

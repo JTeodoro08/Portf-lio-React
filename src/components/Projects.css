@@ -1,0 +1,231 @@
+
+/* Estrutura principal */
+.projects {
+  background-color: var(--component-bg-color); /* Azul clássico no modo claro, ajustado no modo escuro */
+  color: var(--text-color);
+  padding: 1.5rem 2.5rem; /* Redução na altura */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Títulos e textos brancos no modo claro e pretos com efeito dourado no modo escuro */
+
+.card__title,
+.card__description,
+.card__item {
+  color: #FFFFFF; /* Texto branco no modo claro */
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .card__title,
+html[data-theme="dark"] .card__description,
+html[data-theme="dark"] .card__item {
+  color: #000000; /* Texto preto no modo escuro */
+}
+
+html[data-theme="dark"] .projects-title:hover,
+html[data-theme="dark"] .card__title:hover,
+html[data-theme="dark"] .card__description:hover,
+html[data-theme="dark"] .card__item:hover {
+  color: #FFD700; /* Efeito dourado no modo escuro */
+}
+
+/* Botões */
+.card__buttons .btn {
+  color: #FFFFFF; /* Branco no modo claro */
+  background-color: #FFD700; /* Dourado vibrante no modo claro */
+}
+
+html[data-theme="dark"] .btn--repository {
+  color: #FFD700; /* Texto dourado no modo escuro */
+  background-color: #000000; /* Fundo preto no modo escuro */
+}
+
+/* Título do componente */
+.projects-title {
+  font-size: 2.5rem;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.projects-title:hover {
+  color: var(--hover-bg-color); /* Efeito dourado ao hover */
+  transform: scale(1.05);
+}
+
+/* Container de projetos */
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Cartões de projetos com fundo interno diferenciado */
+.projects__card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  background-color:  #1E293B; /* Fundo interno no modo claro */
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+html[data-theme="dark"] .projects__card {
+  background-color: #E5E5E5; /* Fundo interno diferenciado no modo escuro */
+}
+
+.projects__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagens */
+.card__cover {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.card__cover:hover {
+  transform: scale(1.03);
+}
+
+/* Texto e descrição do projeto */
+.card__content {
+  flex: 1;
+  text-align: left;
+}
+
+/* Título do projeto */
+.card__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  margin-bottom: 0.5rem;
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .card__title:hover {
+  color: var(--accent-color); /* Efeito dourado no modo escuro */
+}
+
+.card__title:hover {
+  color: var(--hover-bg-color); /* Efeito dourado no modo claro */
+}
+
+/* Descrição do projeto */
+.card__description {
+  font-size: 1.2rem;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .card__description:hover {
+  color: var(--accent-color); /* Efeito dourado no modo escuro */
+}
+
+.card__description:hover {
+  color: var(--hover-bg-color); /* Efeito dourado no modo claro */
+}
+
+/* Lista de funcionalidades */
+.card__list {
+  margin-bottom: 1rem;
+  list-style: none; /* Remove os pontos */
+  padding-left: 0;
+}
+
+.card__item {
+  font-size: 1rem;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .card__item:hover {
+  color: var(--accent-color); /* Efeito dourado no modo escuro */
+}
+
+.card__item:hover {
+  color: var(--hover-bg-color); /* Efeito dourado no modo claro */
+}
+
+/* Botões de navegação */
+.card__buttons {
+  display: flex;
+  gap: 0.8rem; /* Ajuste para espaçamento maior */
+}
+
+.card__buttons .btn {
+  padding: 0.6rem 1rem 1rem; /* Tamanho refinado */
+  align-items: center;
+  font-size: 1rem;
+  border-radius: 15px; /* Bordas suavizadas */
+  text-decoration: none;
+  color: #ffffff;
+  height: 10px;
+  margin-top: 5rem;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.card__buttons .btn:hover {
+  transform: scale(1.05);
+  background-color: #334155; /* Ajuste de hover no modo escuro */
+}
+
+/* Ícones de tecnologias */
+.technologies__list {
+  display: flex;
+  padding: 0.2rem 0.1rem 0.2rem;
+  justify-content:center;
+  gap: 0.8rem;
+  height: 60px;
+  margin-top: 0;
+}
+
+.technologies__icon:hover {
+  transform: scale(1.15); /* Crescimento ao hover */
+  color: var(--hover-bg-color); /* Efeito dourado no modo claro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .projects__card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .card__cover {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__description {
+    font-size: 1rem;
+  }
+
+  .btn--repository {
+    font-size: 0.85rem;
+  }
+
+  .technologies__icon {
+    font-size: 1.5rem;
+  }
+}

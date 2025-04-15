@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  /* Fonte principal */
+  --font-primary: 'Roboto', sans-serif;
+
+  /* 🌞 Modo Claro */
+  --primary-bg-color: #F5F5F5; /* Cinza-claro para fundo geral */
+  --component-bg-color: #1E3A8A; /* Azul clássico para componentes */
+  --text-color: #1E1E1E; /* Texto preto clássico */
+  --accent-color: #FFD700; /* Dourado para botões e links */
+  --hover-bg-color: #F2C94C; /* Dourado mais suave */
+  --hover-text-color: #FFFFFF; /* Texto branco ao hover */
+  --primary-border-color: #FFD700; /* Bordas douradas */
+  --secondary-border-color: #F2C94C; /* Bordas suaves */
+  --transition: 0.3s ease; /* Transições suaves */
+}
+
+[data-theme="dark"] {
+  /* 🌙 Modo Escuro */
+  --primary-bg-color: #0F172A; /* Azul marinho profundo para fundo geral */
+  --component-bg-color: #1E293B; /* Azul-acizentado para componentes */
+  --text-color: #E5E7EB; /* Cinza-claro para texto */
+  --accent-color: #FFD700; /* Dourado vibrante */
+  --hover-bg-color: #334155; /* Azul mais claro para hover */
+  --hover-text-color: #FFFFFF; /* Texto branco */
+}
+
+html[data-theme="dark"] body {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Estilos globais */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  background-color: var(--primary-bg-color); /* Fundo geral */
+  color: var(--text-color); /* Texto padrão */
+  transition: background-color var(--transition), color var(--transition);
+}
+
+main {
+  width: 100%;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--hover-bg-color);
+}
+
+/* Foco em Links */
+a:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* Botões */
+button {
+  background-color: var(--accent-color);
+  color: var(--hover-text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--text-color);
+}
+
+button:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* Componentes principais */
+.courses,
+.contact,
+.technologies,
+.projects,
+.about {
+  background-color: var(--component-bg-color); /* Fundo dos componentes */
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+
+
+/* Ajustando o hover dos textos no componente Tecnologia */
+.technologies-title:hover,
+.technologies-description:hover,
+.technologies__name:hover {
+  color: var(--hover-bg-color); /* Mantém o efeito dourado apenas nos textos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .courses,
+  .contact,
+  .technologies,
+  .projects,
+  .about {
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+  }
+}

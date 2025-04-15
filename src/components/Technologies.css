@@ -1,0 +1,141 @@
+/* Estrutura principal */
+.technologies {
+  background-color: var(--component-bg-color); /* Azul clássico no claro, fundo harmonioso no escuro */
+  color: var(--text-color);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Container principal */
+.technologies-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Texto à esquerda */
+.technologies__text {
+  flex: 1;
+  text-align: left;
+}
+
+.technologies-title {
+  font-size: 1.8rem;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  margin-bottom: 1rem;
+  transition: color var(--transition);
+}
+
+.technologies-title:hover {
+  color: var(--hover-bg-color); /* Efeito dourado ao hover */
+}
+
+.technologies-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .technologies-description:hover {
+  color: var(--accent-color); /* Efeito dourado nos textos ao hover no modo escuro */
+}
+
+.technologies-description:hover {
+  color: var(--hover-bg-color); /* Efeito dourado ao hover no modo claro */
+}
+
+/* Ícones à direita */
+.technologies__icons {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+/* Estilo de cada tecnologia */
+.technologies__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform var(--transition);
+}
+
+.technologies__item:hover {
+  transform: scale(1.1); /* Leve crescimento ao hover */
+}
+
+/* Ícones gerais */
+.technologies__icon {
+  font-size: 4rem;
+  color: #FFFFFF; /* Ícones brancos nos dois modos */
+  transition: transform var(--transition);
+}
+
+/* Ajuste específico para o ícone do Node.js */
+.technologies__icon.nodejs {
+  font-size: 4rem;
+  color: #83CD29; /* Verde padrão do Node.js para visibilidade adequada nos dois modos */
+}
+
+.technologies__icon.nodejs:hover {
+  color: var(--hover-bg-color); /* Efeito dourado ao hover para o Node.js */
+}
+
+.technologies__icon:hover {
+  transform: scale(1.2); /* Crescimento ao hover */
+}
+
+/* Nome das tecnologias */
+.technologies__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFFFFF; /* Nomes em branco nos dois modos */
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .technologies__name:hover {
+  color: var(--accent-color); /* Nomes dourados ao hover no modo escuro */
+}
+
+.technologies__name:hover {
+  color: var(--hover-bg-color); /* Efeito dourado nos nomes ao hover no modo claro */
+}
+
+/* Modo escuro */
+html[data-theme="dark"] .technologies {
+  background-color: var(--component-bg-color); /* Fundo usado nos componentes no modo escuro */
+  color: #FFFFFF; /* Textos permanecem brancos */
+}
+
+html[data-theme="dark"] .technologies-title:hover {
+  color: var(--accent-color); /* Efeito dourado no hover no modo escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .technologies-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .technologies__icons {
+    justify-content: center;
+  }
+
+  .technologies__icon {
+    font-size: 3rem;
+  }
+
+  .technologies__name {
+    font-size: 1rem;
+  }
+}

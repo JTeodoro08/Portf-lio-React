@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="description" content="Portfólio do desenvolvedor front-end José Teodoro, mostrando projetos e habilidades em desenvolvimento web." />
+
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="José Teodoro | Portfólio">
+    <meta property="og:description" content="Portfólio do desenvolvedor front-end José Teodoro">
+    <meta property="og:image" content="/logo192.png">
+    <meta property="og:url" content="https://seudominio.com">
+
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon/devicon.min.css">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/logo192.png" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Configuração do Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Título do site -->
+    <title>José Teodoro | Portfólio</title>
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX-Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXX-Y');
+    </script>
+
+    <!-- Estilos para modo claro/escuro -->
+    <style>
+      :root {
+        --cor-fundo-claro: #ffffff;
+        --cor-fundo-escuro: #121212;
+        --cor-texto-claro: #000000;
+        --cor-texto-escuro: #ffffff;
+      }
+
+      html[data-theme="light"] {
+        background-color: var(--cor-fundo-claro);
+        color: var(--cor-texto-claro);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      html[data-theme="dark"] {
+        background-color: var(--cor-fundo-escuro);
+        color: var(--cor-texto-escuro);
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modoSalvo = localStorage.getItem("modoTema") || "light"; 
+        document.documentElement.setAttribute("data-theme", modoSalvo);
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>Você precisa habilitar o JavaScript para rodar esta aplicação.</noscript>
+    <div id="root"></div>
+    <!-- Template inicial do React -->
+  </body>
+</html>

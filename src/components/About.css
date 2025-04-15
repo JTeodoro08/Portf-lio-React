@@ -1,0 +1,125 @@
+/* Seção principal */
+.about {
+  padding: 1.5rem 2.5rem; /* Ajuste na altura */
+  background-color: var(--component-bg-color); /* Azul clássico no modo claro, ajustado no modo escuro */
+  color: var(--text-color);
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  transition: background-color var(--transition, 0.3s ease-in-out), color var(--transition, 0.3s ease-in-out);
+}
+
+.about:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Container principal */
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Foto */
+.about__photo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about__photo {
+  width: 220px; /* Ajuste proporcional */
+  height: 220px; /* Ajuste proporcional */
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition, 0.3s ease);
+}
+
+.about__photo:hover {
+  transform: scale(1.05);
+}
+
+/* Descrição */
+.about__description {
+  flex: 2;
+  margin-top: 0.5rem;
+}
+
+.about__title {
+  font-size: 2rem;
+  color: #FFFFFF; /* Branco no modo claro */
+  margin-bottom: 0.8rem;
+  transition: color var(--transition, 0.3s ease);
+}
+
+html[data-theme="dark"] .about__title {
+  color: #FFFFFF; /* Branco no modo claro */
+}
+
+.about__title:hover {
+  color: #FFD700; /* Dourado no modo escuro e claro */
+}
+
+.about__text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: #FFFFFF; /* Branco no modo claro */
+  transition: color var(--transition, 0.3s ease);
+}
+
+html[data-theme="dark"] .about__text {
+  color: #FFFFFF; /* Branco no modo claro */
+}
+
+.about__text:hover {
+  color: #FFD700; /* Efeito dourado ao hover */
+}
+
+/* Ícones */
+.about__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem; /* Ajuste proporcional */
+  color: #FFFFFF; /* Branco no modo claro */
+}
+
+html[data-theme="dark"] .about__icons {
+  color: #FFD700; /* Dourado no modo escuro */
+}
+
+/* Botões */
+.description__buttons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.description__buttons .btn {
+  padding: 0.5rem 1rem; /* Ajuste proporcional */
+  font-size: 0.85rem; /* Ajuste proporcional */
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition, 0.3s ease), transform var(--transition, 0.3s ease);
+}
+
+.description__buttons .btn--primary {
+  background-color: #FFD700; /* Dourado no modo claro */
+  color: #FFFFFF; /* Branco no modo claro */
+  border: none;
+}
+
+html[data-theme="dark"] .btn--primary {
+  background-color: #000000; /* Preto no modo escuro */
+  color: #FFD700; /* Dourado no modo escuro */
+}
+
+.description__buttons .btn:hover {
+  transform: scale(1.05);
+}

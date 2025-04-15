@@ -1,0 +1,124 @@
+/* Estrutura principal */
+.home-container {
+  background-color: var(--component-bg-color); /* Azul clássico no claro, azul-acizentado no escuro */
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.1rem 0.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Área de texto à esquerda */
+.home-left {
+  flex: 1;
+  margin-right: 0.1rem;
+}
+
+/* Título principal */
+.home-title {
+  font-size: 5.5rem;
+  font-weight: 500;
+  margin-bottom: 1px;
+  color: #FFFFFF; /* Primeira parte branca */
+}
+
+.home-title .highlight {
+  font-weight: bold;
+  color: var(--accent-color); /* Segunda parte dourada */
+}
+
+/* Texto descritivo */
+.home-description {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #FFFFFF; /* Texto branco nos dois modos */
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color); /* Linha dourada */
+  transition: color var(--transition);
+}
+
+html[data-theme="dark"] .home-description:hover {
+  color: var(--accent-color); /* Texto dourado ao hover no modo escuro */
+}
+
+.home-description:hover {
+  color: var(--hover-bg-color); /* Texto com efeito dourado ao hover no modo claro */
+}
+
+/* Imagem ajustada */
+.home-image-section {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-image {
+  width: 100%; /* Ajustado para responsividade */
+  max-width: 1080px; /* Limite máximo */
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow var(--transition);
+}
+
+.home-image:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Realce no hover */
+}
+
+/* Legenda da imagem */
+.home-image-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secondary-bg-color); /* Nova cor adaptada ao tema e imagem */
+  color: #FFFFFF; /* Texto branco no modo claro */
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform var(--transition), color var(--transition);
+}
+
+html[data-theme="dark"] .home-image-caption {
+  background-color: var(--hover-bg-color); /* Mantém o dourado no modo escuro */
+  color: var(--hover-text-color); /* Texto branco no modo escuro */
+}
+
+.home-image-caption:hover .caption-highlight {
+  color: var(--accent-color); /* Destaque mais vibrante ao hover */
+  transform: scale(1.1);
+}
+
+.caption-highlight {
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .home-image {
+    max-width: 90%;
+  }
+
+  .home-image-caption {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}

@@ -1,0 +1,36 @@
+/* Estilo base para o botão de alternância */
+.theme-toggle {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.6rem 1.2rem; /* Botão maior para melhor usabilidade */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px; /* Bordas mais arredondadas para modernidade */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Efeito hover para o botão */
+.theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Ajuste de temas específicos */
+.theme-toggle.light {
+  box-shadow: 0 4px 6px rgba(255, 220, 128, 0.4); /* Sombra clara */
+}
+
+.theme-toggle.dark {
+  box-shadow: 0 4px 6px rgba(50, 50, 50, 0.4); /* Sombra escura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .theme-toggle {
+    font-size: 0.85rem; /* Tamanho menor para telas menores */
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,131 @@
+/* Contato */
+.contact {
+  background-color: var(--component-bg-color); /* Azul clássico no modo claro, ajustado no modo escuro */
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition, 0.3s ease), color var(--transition, 0.3s ease);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+/* Ícones sociais */
+.menu--social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform var(--transition, 0.3s ease);
+}
+
+.menu__icon {
+  font-size: 2rem;
+  transition: transform var(--transition, 0.3s ease), color var(--transition, 0.3s ease);
+}
+
+/* Modo claro - cores específicas */
+html[data-theme="light"] .menu__icon.bi-github {
+  color: #000000; /* Preto para GitHub */
+}
+
+html[data-theme="light"] .menu__icon.bi-linkedin {
+  color: #0077B5; /* Azul para LinkedIn */
+}
+
+html[data-theme="light"] .menu__icon.bi-whatsapp {
+  color: #25D366; /* Verde para WhatsApp */
+}
+
+html[data-theme="light"] .menu__icon.bi-twitter {
+  color: #1DA1F2; /* Azul para Twitter */
+}
+
+html[data-theme="light"] .menu__icon.bi-instagram {
+  color: #E1306C; /* Rosa para Instagram */
+}
+
+/* Modo escuro - cores específicas */
+html[data-theme="dark"] .menu__icon.bi-github {
+  color: #FFFFFF; /* Branco no modo escuro */
+}
+
+html[data-theme="dark"] .menu__icon.bi-linkedin {
+  color: #0077B5; /* Azul LinkedIn permanece */
+}
+
+html[data-theme="dark"] .menu__icon.bi-whatsapp {
+  color: #25D366; /* Verde WhatsApp permanece */
+}
+
+html[data-theme="dark"] .menu__icon.bi-twitter {
+  color: #1DA1F2; /* Azul Twitter permanece */
+}
+
+html[data-theme="dark"] .menu__icon.bi-instagram {
+  color: #E1306C; /* Rosa Instagram permanece */
+}
+
+.menu__icon:hover {
+  transform: scale(1.2);
+}
+
+/* Botões */
+.btn {
+  margin-top: 0.1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color var(--transition, 0.3s ease), transform var(--transition, 0.3s ease);
+}
+
+.btn--primary {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+  font-weight: bold;
+}
+
+.btn--primary:hover {
+  background-color: #FFD700;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu--social {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .menu__icon {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

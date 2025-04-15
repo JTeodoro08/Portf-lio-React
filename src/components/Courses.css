@@ -1,0 +1,145 @@
+/* Cursos - Integração com modo claro/escuro */
+.courses {
+  background-color: var(--component-bg-color);
+  color: var(--text-color);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 0.8rem;
+  transition: background-color var(--transition, 0.3s ease), color var(--transition, 0.3s ease);
+}
+
+.courses:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteúdo principal */
+.courses__content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: var(--secondary-bg-color);
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  color: #FFFFFF;
+  transition: background-color var(--transition, 0.3s ease), color var(--transition, 0.3s ease);
+}
+
+
+html[data-theme="dark"] .courses__content {
+  background-color: var(--cor-fundo-escuro);
+  color: #FFFFFF;
+}
+
+/* Títulos e textos alinhados à esquerda */
+.row1 h3, .row2 h3,
+.row1 h4, .row2 h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+html[data-theme="dark"] .row1 h4,
+html[data-theme="dark"] .row2 h4 {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.row2 h3 {
+  color: gold; 
+}
+
+/* Acordeão de cursos */
+.accordion {
+  width: 50%;
+  text-align: left;
+}
+
+.accordion__item {
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all var(--transition, 0.3s ease);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--component-bg-color);
+  border: none;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+html[data-theme="dark"] .accordion__header {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.accordion__body {
+  padding: 0 16px 10px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+html[data-theme="dark"] .accordion__body {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* Lista de tecnologias */
+.about__list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.about__item {
+  font-size: 1rem;
+  color: #FFFFFF;
+  transition: color var(--transition);
+  text-align: left;
+}
+
+html[data-theme="dark"] .about__item {
+  color: #FFFFFF;
+}
+
+/* Estilização do span dentro da lista */
+.about__item span {
+  font-weight: bold;
+  color: #FFD700;
+  text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .courses__content {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+
+  .row1 h3, .row2 h3,
+  .row1 h4, .row2 h4 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+
